@@ -8,21 +8,26 @@ import android.view.ViewGroup
 import com.example.sopt30.databinding.FragmentFollowerListBinding
 
 class FollowerListFragment : Fragment() {
-    private lateinit var followerAdapter : FollowerAdapter
-    private lateinit var binding : FragmentFollowerListBinding
+    private var _binding : FragmentFollowerListBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentFollowerListBinding.inflate(layoutInflater, container, false)
-        initFollowerAdapter()
+    ): View {
+        _binding = FragmentFollowerListBinding.inflate(layoutInflater, container, false)
 
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        initFollowerAdapter()
+    }
+
     private fun initFollowerAdapter() {
-        followerAdapter = FollowerAdapter()
+        val followerAdapter = FollowerAdapter()
         binding.rvFollowerList.adapter = followerAdapter
 
         followerAdapter.followerList.addAll(
@@ -37,5 +42,10 @@ class FollowerListFragment : Fragment() {
             )
         )
         followerAdapter.notifyDataSetChanged()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

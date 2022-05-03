@@ -15,10 +15,14 @@ class RepositoryListFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentRepositoryListBinding.inflate(layoutInflater, container, false)
-        initRepositoryAdapter()
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initRepositoryAdapter()
     }
 
     private fun initRepositoryAdapter() {
