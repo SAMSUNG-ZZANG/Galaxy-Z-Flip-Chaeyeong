@@ -10,13 +10,14 @@ import com.example.sopt30.databinding.FragmentRepositoryListBinding
 
 class RepositoryListFragment : Fragment() {
     private lateinit var repositoryAdapter: RepositoryAdapter
-    private lateinit var binding: FragmentRepositoryListBinding
+    private var _binding: FragmentRepositoryListBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentRepositoryListBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentRepositoryListBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
@@ -41,5 +42,10 @@ class RepositoryListFragment : Fragment() {
             )
         )
         repositoryAdapter.notifyDataSetChanged()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
