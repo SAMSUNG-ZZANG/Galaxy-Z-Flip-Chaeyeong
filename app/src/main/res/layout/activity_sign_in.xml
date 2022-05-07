@@ -6,13 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".SignInActivity">
 
-    <TextView
+    <ImageView
         android:id="@+id/tv_sopt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="@string/signin_sopt"
-        android:textSize="30sp"
+        android:src="@drawable/img_github"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +22,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
+        android:fontFamily="@font/noto_sans_kr_bold"
         android:text="@string/signup_id"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_sopt" />
 
@@ -32,7 +33,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
+        android:background="@drawable/selector_edit"
         android:hint="@string/signup_id_msg"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
         app:layout_constraintStart_toStartOf="@id/tv_id"
         app:layout_constraintTop_toBottomOf="@+id/tv_id" />
 
@@ -42,6 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/noto_sans_kr_bold"
         android:text="@string/signup_pw"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_id" />
@@ -50,7 +55,10 @@
         android:id="@+id/et_pw"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
         android:layout_marginHorizontal="20dp"
+        android:background="@drawable/selector_edit"
         android:hint="@string/signup_pw_msg"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="@id/tv_pw"
@@ -61,20 +69,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginBottom="7dp"
+        android:paddingTop="11dp"
+        android:paddingBottom="13dp"
         android:text="@string/signin_login"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_pw" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_sign_up"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_sign_up"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/cardview_shadow_start_color"
+        android:layout_marginBottom="21dp"
+        android:backgroundTint="#BC9AFF"
+        android:paddingTop="11dp"
+        android:paddingBottom="13dp"
         android:text="@string/signin_signup"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_login"
-        app:layout_constraintStart_toStartOf="@+id/btn_login"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+        app:layout_constraintStart_toStartOf="@+id/btn_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
