@@ -17,3 +17,19 @@ https://user-images.githubusercontent.com/62435316/162625295-9a5e0341-dfff-46e4-
 1. HomeActivity 하단에 FollowerRecyclerView, RepositoryRecyclerView 만들기
 
 ![2주차GIF](https://user-images.githubusercontent.com/62435316/164386240-31e7fb6c-c328-4eb2-a7fe-732eba526938.gif)
+
+### week3
+
+
+
+### week4
+
+- 로그인, 회원가입 서버 통신 구현
+
+1. POSTMAN테스트
+
+2. 회원가입완료 + 로그인완료구현
+
+3. retrofit interface와 구현체코드
+
+4. Request/Response객체에 대한 코드 
