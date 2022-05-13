@@ -1,10 +1,13 @@
 package com.example.sopt30
 
 import android.os.Bundle
+import android.text.TextUtils.replace
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 import com.bumptech.glide.Glide
 import com.example.sopt30.databinding.FragmentFollowerListBinding
 import com.example.sopt30.databinding.FragmentProfileBinding
@@ -39,19 +42,21 @@ class ProfileFragment : Fragment() {
         val followerFragment = FollowerListFragment()
         val repositoryFragment = RepositoryListFragment()
 
-        childFragmentManager.beginTransaction().add(R.id.fcv_list, followerFragment).commit()
+        childFragmentManager.commit {
+            replace<FollowerListFragment>(R.id.fcv_list)
+        }
         binding.btnFollower.isSelected = true
 
         val transaction = childFragmentManager.beginTransaction()
 
         binding.btnFollower.setOnClickListener {
-            binding.btnFollower?.isSelected = binding.btnFollower?.isSelected != true
+            binding.btnFollower.isSelected = binding.btnFollower?.isSelected != true
             binding.btnRepository.isSelected = false
             childFragmentManager.beginTransaction().replace(R.id.fcv_list, followerFragment).commit()
         }
 
         binding.btnRepository.setOnClickListener {
-            binding.btnRepository?.isSelected = binding.btnRepository?.isSelected != true
+            binding.btnRepository.isSelected = binding.btnRepository?.isSelected != true
             binding.btnFollower.isSelected = false
             childFragmentManager.beginTransaction().replace(R.id.fcv_list, repositoryFragment).commit()
         }

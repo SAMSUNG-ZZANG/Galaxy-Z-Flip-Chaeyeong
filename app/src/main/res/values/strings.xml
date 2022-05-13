@@ -18,6 +18,10 @@
     <string name="signin_pw_msg">비밀번호를 입력하세요</string>
     <string name="signin_login">로그인</string>
     <string name="signin_signup">회원가입 하기</string>
+    <string-array name = "tab_label">
+        <item>팔로잉</item>
+        <item>팔로워</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
