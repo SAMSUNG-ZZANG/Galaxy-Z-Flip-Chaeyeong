@@ -10,10 +10,11 @@
         android:id="@+id/tv_sopt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/noto_sans_kr_bold"
         android:text="@string/signup"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,6 +34,9 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:hint="@string/signup_name_msg"
+        android:background="@drawable/selector_edit"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="16dp"
         app:layout_constraintStart_toStartOf="@id/tv_name"
         app:layout_constraintTop_toBottomOf="@id/tv_name" />
 
@@ -52,6 +56,9 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:hint="@string/signup_id_msg"
+        android:background="@drawable/selector_edit"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="16dp"
         app:layout_constraintStart_toStartOf="@id/tv_id"
         app:layout_constraintTop_toBottomOf="@+id/tv_id" />
 
@@ -72,6 +79,9 @@
         android:layout_marginHorizontal="20dp"
         android:hint="@string/signup_pw_msg"
         android:inputType="textPassword"
+        android:background="@drawable/selector_edit"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="16dp"
         app:layout_constraintStart_toStartOf="@id/tv_pw"
         app:layout_constraintTop_toBottomOf="@+id/tv_pw" />
 
@@ -82,6 +92,8 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="30dp"
         android:text="@string/signup_save"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_pw" />
 
