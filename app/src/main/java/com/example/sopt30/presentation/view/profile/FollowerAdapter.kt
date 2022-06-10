@@ -1,8 +1,9 @@
-package com.example.sopt30
+package com.example.sopt30.presentation.view.profile
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sopt30.data.FollwerData
 import com.example.sopt30.databinding.ItemFollowerListBinding
 
 class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewholder>() {
@@ -23,8 +24,7 @@ class FollowerAdapter : RecyclerView.Adapter<FollowerAdapter.FollowerViewholder>
         private val binding: ItemFollowerListBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun onBind(data : FollwerData) {
-            binding.tvFollowerName.text = data.name
-            binding.tvFollowerIntro.text = data.introduction
+            binding.follwerData = data
         }
     }
 }

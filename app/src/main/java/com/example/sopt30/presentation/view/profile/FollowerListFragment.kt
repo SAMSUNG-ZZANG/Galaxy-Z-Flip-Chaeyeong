@@ -1,11 +1,11 @@
-package com.example.sopt30
+package com.example.sopt30.presentation.view.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bumptech.glide.Glide
+import com.example.sopt30.data.FollwerData
 import com.example.sopt30.databinding.FragmentFollowerListBinding
 
 class FollowerListFragment : Fragment() {

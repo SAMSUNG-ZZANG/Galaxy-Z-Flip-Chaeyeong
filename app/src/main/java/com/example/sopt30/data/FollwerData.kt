@@ -1,6 +1,6 @@
-package com.example.sopt30
+package com.example.sopt30.data
 
-data class RepositoryData (
+data class FollwerData(
     val name : String,
     val introduction : String
 )
