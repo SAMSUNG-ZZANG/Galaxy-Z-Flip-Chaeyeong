@@ -1,10 +1,9 @@
-package com.example.sopt30
+package com.example.sopt30.presentation.view.home
 
-import android.os.Debug
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sopt30.data.RepositoryData
 import com.example.sopt30.databinding.ItemRepositoryListBinding
 
 class RepositoryAdapter : RecyclerView.Adapter<RepositoryAdapter.RepositoryViewholder>() {
@@ -28,8 +27,7 @@ class RepositoryAdapter : RecyclerView.Adapter<RepositoryAdapter.RepositoryViewh
         private val binding: ItemRepositoryListBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun onBind(data: RepositoryData) {
-            binding.tvFollowerName.text = data.name
-            binding.tvFollowerIntro.text = data.introduction
+            binding.repoData = data
         }
     }
 }

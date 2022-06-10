@@ -1,9 +1,12 @@
-package com.example.sopt30
+package com.example.sopt30.presentation.view.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
+import com.example.sopt30.*
 import com.example.sopt30.databinding.ActivityHomeBinding
+import com.example.sopt30.presentation.view.camera.CameraFragment
+import com.example.sopt30.presentation.view.profile.ProfileFragment
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var repositoryAdapter: RepositoryAdapter
