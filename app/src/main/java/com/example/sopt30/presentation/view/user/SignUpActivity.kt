@@ -1,10 +1,13 @@
-package com.example.sopt30
+package com.example.sopt30.presentation.view.user
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.sopt30.data.model.request.RequestSignUp
+import com.example.sopt30.data.model.response.ResponseSignUp
+import com.example.sopt30.ServiceCreator
 import com.example.sopt30.databinding.ActivitySignUpBinding
 import retrofit2.Call
 import retrofit2.Callback

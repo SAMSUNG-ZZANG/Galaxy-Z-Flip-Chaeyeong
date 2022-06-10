@@ -1,6 +1,4 @@
-package com.example.sopt30
-
-import android.provider.ContactsContract
+package com.example.sopt30.data.model.response
 
 data class ResponseSignIn(
     val status: Int,

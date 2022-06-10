@@ -1,4 +1,4 @@
-package com.example.sopt30
+package com.example.sopt30.presentation.view.home
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

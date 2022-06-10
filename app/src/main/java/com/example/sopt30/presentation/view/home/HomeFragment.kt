@@ -1,10 +1,13 @@
-package com.example.sopt30
+package com.example.sopt30.presentation.view.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.sopt30.presentation.view.profile.FollowViewPagerAdapter
+import com.example.sopt30.presentation.view.profile.FollowerTabFragment
+import com.example.sopt30.presentation.view.profile.FollowingTabFragment
 import com.example.sopt30.databinding.FragmentHomeBinding
 import com.google.android.material.tabs.TabLayoutMediator
 

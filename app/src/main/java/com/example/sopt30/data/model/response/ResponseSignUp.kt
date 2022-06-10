@@ -1,4 +1,4 @@
-package com.example.sopt30
+package com.example.sopt30.data.model.response
 
 data class ResponseSignUp(
     val status: Int,
